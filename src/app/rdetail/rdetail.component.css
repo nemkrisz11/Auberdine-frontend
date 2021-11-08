@@ -1,0 +1,16 @@
+.container {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.carousel-item {
+  height: 40vh;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 5px;
+}
+
+.bi-star,
+.bi-star-fill {
+  color: rgb(119, 119, 0);
+}

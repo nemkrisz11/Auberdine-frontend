@@ -1,0 +1,14 @@
+.btn-primary {
+  background-color: rgb(134, 90, 134);
+  border-color: rgb(134, 90, 134);
+}
+
+.form-control {
+  background-color: rgb(187, 57, 57);
+}
+
+.container {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
