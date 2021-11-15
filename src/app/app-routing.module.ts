@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'ujbarat', component: AddfriendComponent },
   { path: 'barat', component: FdetailsComponent },
   { path: 'adatmodositas', component: UserdetailsComponent },
+  { path: '**', redirectTo: '/login' },
 ];
 
 @NgModule({
