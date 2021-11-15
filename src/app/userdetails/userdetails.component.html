@@ -1,0 +1,130 @@
+<div class="container mt-5" style="background-color: rgb(247, 247, 247)">
+  <h3 class="pt-3 pr-3 mb-4">Felhasználói adatok megváltoztatása</h3>
+  <form class="row g-3">
+    <div class="form-group row">
+      <div class="d-flex align-items-end col-sm-3">
+        <label for="inputpfp3" class="col-form-label">Profilkép</label>
+      </div>
+      <div class="col-sm-9">
+        <div class="d-flex justify-content-center">
+          <img
+            src="https://www.publicdomainpictures.net/pictures/20000/velka/funny-cat-871298226790TvQ.jpg"
+            width="200rem"
+            class="align-self-center"
+          />
+        </div>
+        <input type="file" class="form-control" id="inputpfp3" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputUname3" class="col-sm-3 col-form-label"
+        >Felhasználónév</label
+      >
+      <div class="col-sm-9">
+        <input
+          type="text"
+          class="form-control"
+          id="inputUname3"
+          placeholder="Felhasználónév"
+          value="roboso"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+      <div class="col-sm-9">
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail3"
+          placeholder="Email"
+          value="roboso@gmail.com"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-3 col-form-label">Jelszó</label>
+      <div class="col-sm-9">
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword3"
+          placeholder="Jelszó"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword4" class="col-sm-3 col-form-label"
+        >Jelszó újból</label
+      >
+      <div class="col-sm-9">
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword4"
+          placeholder="Jelszó újból"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputpref4" class="col-sm-3 col-form-label"
+        >Preferenciák</label
+      >
+      <div class="col-sm-9">
+        <div class="d-flex flex-wrap">
+          <div class="pref">
+            gluténmentes<button class="cross-btn">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="pref">
+            vegán<button class="cross-btn">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="pref">
+            melegbarát<button class="cross-btn">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="pref">
+            indiai<button class="cross-btn">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="pref">
+            kínai<button class="cross-btn">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="pref">
+            olasz<button class="cross-btn">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        </div>
+        <label for="inputpref4" class="col-form-label">Új hozzáadása:</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="inputpref4"
+        >
+          <option selected>gluténmentes</option>
+          <option value="1">indiai</option>
+          <option value="2">kínai</option>
+          <option value="3">melegbarát</option>
+          <option value="3">vegán</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="d-flex justify-content-end">
+        <button class="btn" style="background-color: none">Mégsem</button>
+        <button type="submit" class="btn" style="background-color: plum">
+          Mentés
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<div style="height: 20vh"></div>

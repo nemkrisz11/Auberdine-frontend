@@ -6,6 +6,7 @@ import { RdetailComponent } from './rdetail/rdetail.component';
 import { FriendsComponent } from './friends/friends.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { FdetailsComponent } from './fdetails/fdetails.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'baratok', component: FriendsComponent },
   { path: 'ujbarat', component: AddfriendComponent },
   { path: 'barat', component: FdetailsComponent },
+  { path: 'adatmodositas', component: UserdetailsComponent },
 ];
 
 @NgModule({

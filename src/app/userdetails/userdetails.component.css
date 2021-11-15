@@ -1,0 +1,43 @@
+.container {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+form {
+  padding: 1rem;
+}
+
+@media (min-width: 960px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+img {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.pref {
+  padding: 0.5rem;
+  margin-left: 0rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: #fff6fa;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.cross-btn {
+  color: #ff6666;
+  background-color: transparent;
+  border: rgba(0, 0, 0, 0.2);
+}

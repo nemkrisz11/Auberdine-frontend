@@ -16,6 +16,7 @@ import { FriendsComponent } from './friends/friends.component';
 import { FcardComponent } from './fcard/fcard.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { FdetailsComponent } from './fdetails/fdetails.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FdetailsComponent } from './fdetails/fdetails.component';
     FcardComponent,
     AddfriendComponent,
     FdetailsComponent,
+    UserdetailsComponent,
   ],
   imports: [
     BrowserModule,
