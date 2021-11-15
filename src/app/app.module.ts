@@ -17,6 +17,7 @@ import { FcardComponent } from './fcard/fcard.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { FdetailsComponent } from './fdetails/fdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     AddfriendComponent,
     FdetailsComponent,
     UserdetailsComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

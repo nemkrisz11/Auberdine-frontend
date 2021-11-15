@@ -1,0 +1,24 @@
+.btn-primary {
+  background-color: plum;
+  border-color: plum;
+  color: rgb(53, 53, 53);
+}
+
+.form-control {
+  background-color: #ffb7b7;
+}
+
+.container {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+@media (min-width: 960px) {
+  .container {
+    max-width: 720px;
+  }
+}
+.row {
+  margin-bottom: 1rem;
+}

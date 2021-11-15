@@ -7,9 +7,11 @@ import { FriendsComponent } from './friends/friends.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { FdetailsComponent } from './fdetails/fdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'ajanlatok', component: RecommendationsComponent },
   { path: 'etterem', component: RdetailComponent },
   { path: 'baratok', component: FriendsComponent },
