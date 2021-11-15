@@ -12,6 +12,10 @@ import { FooterComponent } from './footer/footer.component';
 import { RdetailComponent } from './rdetail/rdetail.component';
 import { FriendRatingComponent } from './friend-rating/friend-rating.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { FriendsComponent } from './friends/friends.component';
+import { FcardComponent } from './fcard/fcard.component';
+import { AddfriendComponent } from './addfriend/addfriend.component';
+import { FdetailsComponent } from './fdetails/fdetails.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { GoogleMapsModule } from '@angular/google-maps';
     FooterComponent,
     RdetailComponent,
     FriendRatingComponent,
+    FriendsComponent,
+    FcardComponent,
+    AddfriendComponent,
+    FdetailsComponent,
   ],
   imports: [
     BrowserModule,

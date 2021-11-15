@@ -1,0 +1,27 @@
+.container {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding-bottom: 0.5rem;
+  margin-bottom: 10rem;
+}
+
+@media (min-width: 720px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+.btn {
+  background-color: plum;
+  margin: 1rem;
+}
+
+.bg-danger {
+  margin-top: 0rem;
+}
+
+.form-inline {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
