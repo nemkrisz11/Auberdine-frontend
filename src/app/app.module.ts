@@ -18,6 +18,8 @@ import { AddfriendComponent } from './addfriend/addfriend.component';
 import { FdetailsComponent } from './fdetails/fdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     GoogleMapsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
