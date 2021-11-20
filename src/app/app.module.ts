@@ -19,7 +19,10 @@ import { FdetailsComponent } from './fdetails/fdetails.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthService } from './auth.service';
+import { Interceptor } from './interceptor/interceptor';
+import jwtDecode from 'jwt-decode';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

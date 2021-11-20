@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private authService: AuthService,
-    private router: Router
+    public router: Router
   ) {}
 
   ngOnInit(): void {
@@ -44,9 +44,9 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       this.authService.register(this.loginForm).subscribe((response) => {
-        if (response == null) {
+        if (response.email === undefined) {
           alert('Sikeres regisztráció!');
-          this.router.navigate(['/user/login']);
+          this.router.navigate(['login']);
         } else if (response.status >= 400) {
           alert('hiba történt a webszerverhez való csatlakozáskor!');
         }
