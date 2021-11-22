@@ -1,24 +1,37 @@
 <div class="container mt-5" style="background-color: rgb(247, 247, 247)">
   <h3 class="pt-3 pr-3">Új barát hozzáadása</h3>
   <hr class="bg-danger border-2 border-top border-danger" />
-  <form class="form-inline my-2 my-lg-0">
+  <form class="form-inline my-2 my-lg-0" ng-controller="SearchCtrl as vm">
     <input
       class="form-control mr-sm-2"
       type="search"
+      name="search"
       placeholder="Keresés"
       aria-label="Search"
+      (keyup)="searchUsers($event)"
     />
   </form>
-  <div class="d-flex">
-    <app-fcard style="width: 100%"></app-fcard>
-    <button class="btn remove" style="margin-left: 0rem">hozzáadás</button>
+  <div *ngIf="queryResult.length > 0">
+    <div class="d-flex" *ngFor="let user of queryResult">
+      <app-fcard style="width: 100%" [name]="user['name']"></app-fcard>
+      <button
+        class="btn remove"
+        style="margin-left: 0rem"
+        [name]="user['name']"
+        (click)="sendFriendRequest(user['user_id'])"
+      >
+        hozzáadás
+      </button>
+    </div>
+    <div *ngIf="this.errorMsg != ''">
+      <div class="d-flex justify-content-center" style="color: salmon">
+        <p>{{ this.errorMsg }}</p>
+      </div>
+    </div>
   </div>
-  <div class="d-flex">
-    <app-fcard style="width: 100%"></app-fcard>
-    <button class="btn remove" style="margin-left: 0rem">hozzáadás</button>
-  </div>
-  <div class="d-flex">
-    <app-fcard style="width: 100%"></app-fcard>
-    <button class="btn remove" style="margin-left: 0rem">hozzáadás</button>
+  <div *ngIf="queryResult.length == 0">
+    <div class="d-flex justify-content-center mt-3">
+      <p>Nincs a keresésnek megfelelő elem!</p>
+    </div>
   </div>
 </div>
