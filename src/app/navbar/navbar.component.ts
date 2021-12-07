@@ -3,6 +3,7 @@ import { AuthService } from '../auth.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FriendsService } from '../friends.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,10 +17,14 @@ export class NavbarComponent implements OnInit {
     public authService: AuthService,
     public httpClient: HttpClient,
     private friendsService: FriendsService,
+    private userService: UserService,
     public router: Router
   ) {}
 
   ngOnInit(): void {
+    this.userService.currentUserName.subscribe(
+      (username) => (this.username = username)
+    );
     this.authService.currentUsername.subscribe(
       (username) => (this.username = username)
     );
