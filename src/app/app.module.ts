@@ -23,6 +23,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { Interceptor } from './interceptor/interceptor';
 import jwtDecode from 'jwt-decode';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import jwtDecode from 'jwt-decode';
     FdetailsComponent,
     UserdetailsComponent,
     RegisterComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import jwtDecode from 'jwt-decode';
     GoogleMapsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxStarRatingModule,
   ],
   providers: [
     AuthService,

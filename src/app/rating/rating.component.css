@@ -1,0 +1,15 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgb(255, 246, 250);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 8px;
+}
+
+#star-rating {
+  color: rgb(119, 119, 0);
+}
