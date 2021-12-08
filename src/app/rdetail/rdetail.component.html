@@ -1,86 +1,45 @@
 <div class="container mt-5 p-0" style="background-color: rgb(247, 247, 247)">
-  <div
-    id="carouselExampleFade"
-    class="carousel slide carousel-fade"
-    data-bs-ride="carousel"
-  >
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          src="http://feketterem.hu/wp-content/uploads/2014/10/F%C5%90FOT%C3%93-612x360.jpg"
-          class="d-block w-100"
-          alt="..."
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://storage.googleapis.com/welove-media/5a/borkonyha_korosi-tamas_20170608.exact1980w.jpg"
-          class="d-block w-100"
-          alt="..."
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://storage.googleapis.com/welove-media/a1/borkonyha_korosi-tamas_20170608_2.exact1980w.jpg"
-          class="d-block w-100"
-          alt="..."
-        />
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselExampleFade"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExampleFade"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+  <div style="width: 100%; height: 100%; overflow: hidden">
+    <img
+      src="data:image/png;base64,{{ details.picture }}"
+      alt="Avatar"
+      style="width: 100%; height: 400px; object-fit: cover"
+    />
   </div>
-
   <div class="m-3 pb-3">
     <div class="d-flex">
-      <h4>Mr. Tic-tac étterem&nbsp;</h4>
+      <h3>{{ details.name }}&nbsp;</h3>
     </div>
     <div class="d-flex justify-content-between flex-md-row flex-column">
-      <div>
-        <div class="m-2 mb-4">
-          Kopasz mint a fa télen hogy ha fagy Cuki veled ha bármilyen is vagy
-          Helyes mint a Tom a Top Gánban Karban ringatom a szinti tokjában Erős
-          mint a hó bátor mint egy hegy Édes mint a só de egyszer egy az egy Nem
-          mozog soha fent a színpadon De a szív doktora egy nyári címlapon
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="d-flex">
+            <h5>Összesített értékelés:&nbsp;</h5>
+            <div *ngIf="details.rating > 0" class="d-flex">
+              <div *ngFor="let i of [].constructor(details.rating)">
+                <i class="bi bi-star-fill">&nbsp;</i>
+              </div>
+            </div>
+            <div *ngFor="let i of [].constructor(5 - details.rating)">
+              <i class="bi bi-star"></i>
+            </div>
+          </div>
+          <div class="m-2" *ngFor="let review of details.reviews">
+            <app-friend-rating [review]="review"></app-friend-rating>
+          </div>
+          <app-rating [restaurantId]="rid.id"></app-rating>
         </div>
-        <div class="d-flex m-2">
-          <h5>Összesített értékelés:&nbsp;</h5>
-          <div class="stars">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
+        <div class="col-lg-6 pt-3 d-lg-flex justify-content-end">
+          <div>
+            <h5>Térkép:</h5>
+            <google-map width="500px" height="500px"
+              ><map-marker [position]="this.marker.position"></map-marker
+            ></google-map>
+            <i>{{ details.address }}</i>
           </div>
         </div>
-        <div class="m-2">
-          <app-friend-rating></app-friend-rating>
-          <app-friend-rating></app-friend-rating>
-          <app-friend-rating></app-friend-rating>
-        </div>
-        <app-rating></app-rating>
-      </div>
-      <div>
-        <h5>Térkép:</h5>
-        <google-map width="300px" height="300px"></google-map>
       </div>
     </div>
   </div>
+  <div style="height: 20vh"></div>
 </div>
-<div style="height: 20vh"></div>

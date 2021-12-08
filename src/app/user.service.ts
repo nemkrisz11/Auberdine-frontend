@@ -32,4 +32,8 @@ export class UserService {
       }
     );
   }
+
+  getRatings(id: any): Observable<any> {
+    return this.httpClient.get(environment.apiUrl + `/user/${id}`);
+  }
 }

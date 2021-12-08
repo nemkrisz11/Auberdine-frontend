@@ -1,21 +1,9 @@
 <div class="container mt-5" style="background-color: rgb(247, 247, 247)">
   <h3 class="pt-3 pr-3">Legjobb ajánlatok</h3>
   <hr class="bg-danger border-2 border-top border-danger" />
-  <div class="d-flex justify-content-around p-3 flex-lg-row flex-column">
-    <app-rcard></app-rcard>
-    <app-rcard></app-rcard>
-    <app-rcard></app-rcard>
-  </div>
-  <hr class="bg-danger border-2 border-top border-danger" />
-  <h3 class="pt-3 pr-3">További ajánlatok</h3>
-  <div class="d-flex justify-content-around p-3 flex-lg-row flex-column">
-    <app-rcard></app-rcard>
-    <app-rcard></app-rcard>
-    <app-rcard></app-rcard>
-  </div>
-  <div class="d-flex justify-content-around p-3 flex-lg-row flex-column">
-    <app-rcard></app-rcard>
-    <app-rcard></app-rcard>
-    <app-rcard></app-rcard>
+  <div class="row">
+    <div class="col-sm-12 col-lg-4" *ngFor="let rec of recommendations">
+      <app-rcard class="" [details]="rec"></app-rcard>
+    </div>
   </div>
 </div>

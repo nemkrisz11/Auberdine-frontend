@@ -23,7 +23,6 @@ export class UserdetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getUserData().subscribe((ret: any) => {
-      console.log(ret);
       this.username = ret.name;
       this.email = ret.email;
     });

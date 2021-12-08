@@ -13,7 +13,11 @@
   </form>
   <div *ngIf="queryResult.length > 0">
     <div class="d-flex" *ngFor="let user of queryResult">
-      <app-fcard style="width: 100%" [name]="user['name']"></app-fcard>
+      <app-fcard
+        style="width: 100%"
+        [name]="user['name']"
+        [id]="user['user_id']"
+      ></app-fcard>
       <button
         class="btn remove"
         style="margin-left: 0rem"

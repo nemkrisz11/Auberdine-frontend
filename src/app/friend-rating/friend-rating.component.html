@@ -1,14 +1,19 @@
-<div>
+<div class="card p-3">
   <div class="d-flex align-items-center">
-    <h6 style="text-align: center">
+    <h6 style="text-align: center" class="d-flex">
       <i class="bi-person-circle"></i>
-      &nbsp;barát 2 értékelése:&nbsp;
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star"></i>
-      <i class="bi bi-star"></i>
+      &nbsp;{{ review.name }} értékelése:&nbsp;
+      <div *ngIf="review.rating > 0" class="d-flex">
+        <div *ngFor="let i of [].constructor(review.rating)">
+          <i class="bi bi-star-fill">&nbsp;</i>
+        </div>
+      </div>
+      <div *ngFor="let i of [].constructor(5 - review.rating)">
+        <i class="bi bi-star"></i>
+      </div>
     </h6>
   </div>
-  <p class=""><i>&emsp;"Nekem annyira nem tetszett ez a hely"</i></p>
+  <p *ngIf="review.description !== ''">
+    <i>&emsp;"{{ review.description }}"</i>
+  </p>
 </div>

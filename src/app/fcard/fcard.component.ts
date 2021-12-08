@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fcard',
@@ -8,8 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FcardComponent implements OnInit {
   @Input()
   name = '';
+  @Input()
+  id = 'asdfasdf';
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  navigate() {
+    this.router.navigate(['/barat'], { state: { id: this.id } });
+  }
 
   ngOnInit(): void {}
 }

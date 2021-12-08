@@ -69,7 +69,6 @@ export class AuthService {
       .post(environment.apiUrl + '/user/logout', null)
       .subscribe((resp) => {
         if (resp === 'ok') {
-          console.log('logout successful');
           this.usernameSource.next('');
         } else alert('logout unsuccessfull');
       });

@@ -6,7 +6,11 @@
     <hr class="bg-danger border-2 border-top border-danger" />
     <div *ngFor="let request of friendRequests">
       <div class="d-flex">
-        <app-fcard style="width: 100%" [name]="request['name']"></app-fcard>
+        <app-fcard
+          style="width: 100%"
+          [name]="request['name']"
+          [id]="request['user_id']"
+        ></app-fcard>
         <button
           class="btn"
           style="margin-left: 0rem"
@@ -35,7 +39,11 @@
   <div *ngIf="friends.length > 0">
     <div *ngFor="let friend of friends">
       <div class="d-flex">
-        <app-fcard style="width: 100%" [name]="friend['name']"></app-fcard>
+        <app-fcard
+          style="width: 100%"
+          [name]="friend['name']"
+          [id]="friend['user_id']"
+        ></app-fcard>
         <button
           class="btn remove"
           style="margin-left: 0rem"
