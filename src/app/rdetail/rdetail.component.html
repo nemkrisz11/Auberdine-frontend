@@ -17,7 +17,7 @@
             <h5>Összesített értékelés:&nbsp;</h5>
             <div *ngIf="details.rating > 0" class="d-flex">
               <div *ngFor="let i of [].constructor(details.rating)">
-                <i class="bi bi-star-fill">&nbsp;</i>
+                <i class="bi bi-star-fill"></i>
               </div>
             </div>
             <div *ngFor="let i of [].constructor(5 - details.rating)">

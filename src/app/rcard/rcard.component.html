@@ -25,7 +25,7 @@
           <h6>{{ friend.name }} értékelése:&nbsp;</h6>
           <div *ngIf="friend.rating > 0" class="d-flex">
             <div *ngFor="let i of [].constructor(friend.rating)" class="stars">
-              <i class="bi bi-star-fill">&nbsp;</i>
+              <i class="bi bi-star-fill"></i>
             </div>
           </div>
           <div
