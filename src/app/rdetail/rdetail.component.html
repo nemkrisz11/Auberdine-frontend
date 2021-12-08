@@ -32,7 +32,10 @@
         <div class="col-lg-6 pt-3 d-lg-flex justify-content-end">
           <div>
             <h5>Térkép:</h5>
-            <google-map width="500px" height="500px"
+            <google-map
+              width="30rem"
+              height="30rem"
+              [center]="this.marker.position"
               ><map-marker [position]="this.marker.position"></map-marker
             ></google-map>
             <i>{{ details.address }}</i>
