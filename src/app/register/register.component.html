@@ -65,14 +65,10 @@
         </div>
       </div>
       <div class="form-group row">
-        <div class="d-flex justify-content-center" style="margin-top: 2rem">
-          <button
-            class="btn"
-            style="background-color: none; color: grey"
-            (click)="this.router.navigate(['login'])"
-          >
-            Mégsem
-          </button>
+        <div
+          class="d-flex justify-content-center flex-row-reverse"
+          style="margin-top: 2rem"
+        >
           <button
             type="submit"
             class="btn"
@@ -80,6 +76,13 @@
             (click)="onSubmit()"
           >
             Regisztráció
+          </button>
+          <button
+            class="btn"
+            style="background-color: none; color: grey"
+            (click)="this.router.navigate(['login'])"
+          >
+            Mégsem
           </button>
         </div>
       </div>
